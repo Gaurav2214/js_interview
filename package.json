@@ -1,0 +1,13 @@
+{
+    "name": "js_interview",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "nodemon server.js",
+        "start": "http-server"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "nodemon": "^3.1.10"
+    }
+}
