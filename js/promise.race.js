@@ -1,0 +1,2 @@
+
+// Polyfill for promice.race
