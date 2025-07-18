@@ -1,0 +1,2 @@
+
+// polyfill of promise.any
