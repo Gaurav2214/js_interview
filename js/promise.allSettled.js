@@ -36,7 +36,11 @@ const promisAllSettled = (promises) => {
 }
 
 const p21 = Promise.resolve(4);
-const p31 = Promise.reject(5);
+const p31 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject(5);
+    }, 2000);
+})
 const p41 = Promise.resolve(6);
 
 promisAllSettled([p21, p31, p41])
