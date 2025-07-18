@@ -44,3 +44,7 @@ promise.then((orderId) => {
 .catch(function (err) {
     console.log(err.message);
 })
+
+// Promise is an object that represents eventual completion or failure of an async operation.
+// It has 3 states - pending, fulfilled, rejected
+// As soon as the promise is fulfilled/rejected, it updates the empty object which is assigned undefined in pending state. 
