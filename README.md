@@ -25,10 +25,10 @@
             <li>Promise can be created using <b>new Promise()</b> constructor function.</li>
             <li> This constructor function takes a callback as an argument.</li>
             <pre>
-                const promise = new promise((resolve, reject) => {
-                    resolve();
-                    reject();
-                })
+const promise = new promise((resolve, reject) => {
+    resolve();
+    reject();
+})
             </pre>
             <li>The callback function has 2 argument - resolve and reject, which is provided by JavaScript.</li>
         </ul>
