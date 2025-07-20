@@ -39,14 +39,14 @@ const promise = new promise((resolve, reject) => {
             <li>We can have multiple .catch() as per the requirement and then a general .catch() at the end.</li>
             <p></p>
             <pre>
-                const cart = ['shirt', 'pant', 'jeans'];
-
+const cart = ['shirt', 'pant', 'jeans'];
 
 const validateCard = (cart) => {
     return true;
 }
 
 const createOrder = (cart) => {
+    
     const pr = new Promise((resolve, reject) => {
 
         if(!validateCard(cart)){
@@ -59,7 +59,6 @@ const createOrder = (cart) => {
             resolve(orderId);
         }, 2000);
     })
-
     return pr;
 }
 
