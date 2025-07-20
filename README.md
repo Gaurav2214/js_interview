@@ -86,4 +86,13 @@ promise.then((orderId) => {
             </pre>
         </ul>
     </details>
+    <details>
+        <summary>
+            <b>Async await</b>
+        </summary>
+        <p></p>
+        <ul>
+            <li>The <b>async</b> keyword transform a regular javascript function into an asynchronous function, causing it to return a Promise. </li>
+        </ul>
+    </details>
 </div>
