@@ -24,13 +24,19 @@
         <ul>
             <li>Promise can be created using <b>new Promise()</b> constructor function.</li>
             <li> This constructor function takes a callback as an argument.</li>
+            <p></p>
             <pre>
 const promise = new promise((resolve, reject) => {
     resolve();
     reject();
-})
-            </pre>
+})          </pre>
             <li>The callback function has 2 argument - resolve and reject, which is provided by JavaScript.</li>
+            <li>We can only resolve or reject a promise nothing else can be done.</li>  
+            <li>An error also can be created using the <b>new Error('error msg')</b> constructor function.</li>
+            <li>We can also use the .catch() method to handle the errors during the execution of the promise chain.</li>
+            <li>.catch() method only handles the error of .then(), which is define above the .catch() method.</li>
+            <li>If .then() method define below the .catch() method then .catch() method wont handle error for this .then() method, and it will get executed no matter what.</li>
+            <li>We can have multiple .catch() as per the requirement and then a general .catch() at the end.</li>
         </ul>
     </details>
 </div>
