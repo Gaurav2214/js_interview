@@ -93,6 +93,41 @@ promise.then((orderId) => {
         <p></p>
         <ul>
             <li>The <b>async</b> keyword transform a regular javascript function into an asynchronous function, causing it to return a Promise. </li>
+            <li>An <b>await</b> keyword can only be used inside an async function, to pause its execution and wait for a <b>Promise</b> to resolve before continuing.</li>
+            <li>The main difference between a normal function and async function is, an async fuction always return a <b>Promise</b>.</li>
+            <p></p>
+            <pre>
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise resolve value 1!!');
+    }, 5000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Promise resolve value 2!!');
+    }, 10000);
+});
+
+// await can only be used inside the async function
+
+const handlePromise = async () => {
+    console.log('Hello JavaScript');
+
+    const val = await p1;
+    console.log(val);
+
+    const val2 = await p2;
+    console.log(val2);
+}
+
+handlePromise();
+            </pre>
+            <li>When we call the handlePromise() method, it will execute the code line by line.</li>
+            <li>It first prints the console log 'Hello JavaScript', then move to the next line and it finds the await keyword </li>
+            <li>Here JS engine does not wait to resolve the promise, it will just suspend the handlePromise() method for the time being and move out from the call stack</li>
+            <li>It wouldn't block the main thread or it wouldn't freeze our page, so that if any event outside they can execute easily.</li>
+            <li>After some time when promise has resolve it again start executing from where it left.</li>
         </ul>
     </details>
     <details>
@@ -100,6 +135,6 @@ promise.then((orderId) => {
             <b>Error Vs TypeError</b>
         </summary>
         <p></p>
-        <p>In JavaScript, Error is the base constructor for all the in built error objects, while TypeError is the specific type of error that indicates an operation could not be performed, because the provided value is not the specific type.</p>
+        <p>In JavaScript, <b>Error</b> is the base constructor for all the in built error objects, while <b>TypeError</b> is the specific type of error that indicates an operation could not be performed, because the provided value is not the specific type.</p>
     </details>
 </div>
