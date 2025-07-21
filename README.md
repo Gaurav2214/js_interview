@@ -95,4 +95,11 @@ promise.then((orderId) => {
             <li>The <b>async</b> keyword transform a regular javascript function into an asynchronous function, causing it to return a Promise. </li>
         </ul>
     </details>
+    <details>
+        <summary>
+            <b>Error Vs TypeError</b>
+        </summary>
+        <p></p>
+        <p>In JavaScript, Error is the base constructor for all the in built error objects, while TypeError is the specific type of error that indicates an operation could not be performed, because the provided value is not the specific type.</p>
+    </details>
 </div>
