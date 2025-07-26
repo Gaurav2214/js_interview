@@ -16,14 +16,14 @@ const flatObjectArray = (arr) => {
 
         } else if(Array.isArray(arr[i])){
 
-            arr[i].forEach((item, j) => {
+            arr[i].forEach((item, k) => {
                 if(typeof item === 'object'){
                     const temp2 = flatObjectArray(item);
-                    for (const k in temp2) {
-                        result1[i+'_'+j+'_'+k] = temp2[k];
+                    for (const l in temp2) {
+                        result1[i+'_'+k+'_'+l] = temp2[l];
                     }
                 } else{
-                    result1[i+'_'+j] = item;
+                    result1[i+'_'+k] = item;
                 }
             })
 

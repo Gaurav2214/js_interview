@@ -43,7 +43,7 @@ promiseAll([p11, p22, p33])
 })
 
 // It takes an array of promises, and wait for all to succeed, and if all are successful then it returns the array of results for all the promises.
-// It will immediatelt show the error if any of the promise fail. Thatswhy we call it fail fast.
+// It will immediatelly show the error if any of the promise fail. Thatswhy we call it fail fast.
 
 // In built method 
 
