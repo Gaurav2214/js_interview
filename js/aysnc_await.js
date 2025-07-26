@@ -26,7 +26,7 @@ const handlePromise = async () => {
 
 handlePromise();
 
-// when we will call the handlePromise(), it will come to call stack and execute the code line by line,
+// when we will call the handlePromise(), it will come into the call stack and execute the code line by line,
 // It first prints the console log 'Namaste JavaScript', then move to the next line and it finds the await 
 // here JS engine does not wait to resolve the promise, it will just suspend the handlePromise() method for the time being and move out from the call stack,
 // It wouldn't block the main thread or it wouldn't freeze our page, so that if any event outside they can execute easily.
