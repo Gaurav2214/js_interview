@@ -12,9 +12,12 @@ const retryPromise = (fn, retries = 3, delay) => {
             })
             .catch((err) => {
                 if(count === 0){
-                    return reject('Invalid operation'+ err);
+                    return reject(new Error('Invalid operation'));
                 }
-                setTimeout(() => {attemp(count-1)}, delayDuration);
+                setTimeout(() => {
+                    attemp(count-1);
+                    console.log('retries'+count);
+                }, delayDuration);
             })
         }
         attemp(retries);
@@ -22,9 +25,14 @@ const retryPromise = (fn, retries = 3, delay) => {
 }
 
 const prTry = new Promise((resolve, reject) => {
-    resolve('Success');
+    let statusCode = 300;
+    if(statusCode === 200){
+        resolve('Success');
+    } else {
+        reject((err) => console.log(err));
+    }
 })
 
-retryPromise(prTry);
+retryPromise(prTry, 3, 2000);
 
 
