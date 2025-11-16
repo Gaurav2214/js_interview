@@ -132,6 +132,18 @@ handlePromise();
     </details>
     <details>
         <summary>
+            <b>Types Of Promises</b>
+        </summary>
+        <p></p>
+        <ul>
+            <li>Promise.all</li>
+            <li>Promise.allSettled</li>
+            <li>Promise.any</li>
+            <li>Promise.race</li>
+        </ul>
+    </details>
+    <details>
+        <summary>
             <b>Error Vs TypeError</b>
         </summary>
         <p></p>
