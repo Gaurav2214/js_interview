@@ -7,18 +7,63 @@ const arrDeep = [
     [10, 11, 12]
 ];
 
+const result1 = [];
 const flatArray = (arr) => {
+    
 
-    const result = [];
-    arr.forEach((element) => {
-        if(Array.isArray(element)){
-            result.push(...flatArray(element))
+    if(arr.length === 0){
+        return result1;
+    }
+
+    arr.map((item) => {
+        if(Array.isArray(item)){
+            flatArray(item); 
         } else {
-            result.push(element);
+            result1.push(item);
         }
-    }); 
-        
-    return result;
+    })
+
+
+
+    return result1;
 }
 
 console.log(flatArray(arrDeep));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const flatArray = (arr) => {
+
+//     const result = [];
+//     arr.forEach((element) => {
+//         if(Array.isArray(element)){
+//             result.push(...flatArray(element))
+//         } else {
+//             result.push(element);
+//         }
+//     }); 
+        
+//     return result;
+// }
+
+// console.log(flatArray(arrDeep));
+
+
+
+

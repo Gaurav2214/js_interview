@@ -1,6 +1,6 @@
 // Count Vowels
 
-const strVowels1 = 'gaurav-saumya';
+const strVowels1 = 'gaurav-saumyai';
 
 const countShowVowels = (str) => {
 

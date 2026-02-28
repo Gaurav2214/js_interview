@@ -2,36 +2,88 @@
 
 const inputObj = {a:1, b:2, c:["four", "five", ['nine', 'ten', ['eleven']]], d:{e:1, f:2},g:{h:["six","seven",['twelve']],i:8}};
 
-const flatObjectArray = (arr) => {
-    const result1 = {};
 
-    for (const i in arr) {
+const flatObjectArray = (obj) => {
+    const result11 = {};
 
-        if(typeof(arr[i]) === 'object' && !Array.isArray(arr[i])){
-
-            const temp1 = flatObjectArray(arr[i]);
-            for (const j in temp1) {
-                result1[i+'_'+j] = temp1[j];
+    for (let i in obj) {
+        if(typeof(obj[i]) === 'object' && !Array.isArray(obj[i])){
+            const temp1 = flatObjectArray(obj[i]);
+            for(const n in temp1){
+                result11[i+'_'+n] = temp1[n];
             }
-
-        } else if(Array.isArray(arr[i])){
-
-            arr[i].forEach((item, k) => {
-                if(typeof item === 'object'){
-                    const temp2 = flatObjectArray(item);
-                    for (const l in temp2) {
-                        result1[i+'_'+k+'_'+l] = temp2[l];
+        } else if(Array.isArray(obj[i])){
+            obj[i].map((item, index) => {
+                if(typeof(item) === 'object'){
+                    const temp = flatObjectArray(item);
+                    for(const l in temp){
+                        result11[i+'_'+index+'_'+l] = temp[l];
                     }
                 } else{
-                    result1[i+'_'+k] = item;
+                    result11[i+'_'+index] = item;
                 }
             })
-
         } else {
-            result1[i] = arr[i];
+            result11[i] = obj[i];
         }
     }
-    return result1;
+    return result11;
 }
 
 console.log(flatObjectArray(inputObj));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const flatObjectArray = (arr) => {
+//     const result1 = {};
+
+//     for (const i in arr) {
+
+//         if(typeof(arr[i]) === 'object' && !Array.isArray(arr[i])){
+
+//             const temp1 = flatObjectArray(arr[i]);
+//             for (const j in temp1) {
+//                 result1[i+'_'+j] = temp1[j];
+//             }
+
+//         } else if(Array.isArray(arr[i])){
+
+//             arr[i].forEach((item, k) => {
+//                 if(typeof item === 'object'){
+//                     const temp2 = flatObjectArray(item);
+//                     for (const l in temp2) {
+//                         result1[i+'_'+k+'_'+l] = temp2[l];
+//                     }
+//                 } else{
+//                     result1[i+'_'+k] = item;
+//                 }
+//             })
+
+//         } else {
+//             result1[i] = arr[i];
+//         }
+//     }
+//     return result1;
+// }
+
+// console.log(flatObjectArray(inputObj));
