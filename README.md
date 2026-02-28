@@ -144,6 +144,29 @@ handlePromise();
     </details>
     <details>
         <summary>
+            <b>Repaint Vs Reflow</b>
+        </summary>
+        <p></p>
+        <ul>
+            <li><b>Repaint</b> happens when an element's appearance but there is no change in the layout/structure.
+                <ul>
+                    <li>Changing colour</li>
+                    <li>Changing visibility</li>
+                    <li>Adding shadow</li>
+                </ul>
+            </li>
+            <li><b>Reflow</b> happens when an element's size, position and layout changes which affect the structure of the page
+                <ul>
+                    <li>Changing height/width</li>
+                    <li>Updating size/position of the elements</li>
+                    <li>Adding/removing elements</li>
+                </ul>
+            </li>
+            <li>𝗥𝗲𝗳𝗹𝗼𝘄 is an 𝗲𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻 compared to 𝗥𝗲𝗽𝗮𝗶𝗻𝘁.</li>
+        </ul>
+    </details>
+    <details>
+        <summary>
             <b>Error Vs TypeError</b>
         </summary>
         <p></p>
