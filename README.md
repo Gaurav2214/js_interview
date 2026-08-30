@@ -148,7 +148,7 @@ handlePromise();
         </summary>
         <p></p>
         <ul>
-            <li><b>Repaint</b> happens when an element's appearance but there is no change in the layout/structure.
+            <li><b>Repaint</b> happens when an element's appearance changes but there is no change in the layout/structure.
                 <ul>
                     <li>Changing colour</li>
                     <li>Changing visibility</li>
