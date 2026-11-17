@@ -14,7 +14,7 @@ const p2 = new Promise((resolve, reject) => {
 
 // await can only be used inside the async function
 
-const handlePromise = async () => {
+const handlePromise = async () => { 
     console.log('Namaste JavaScript');
 
     const val = await p1;
