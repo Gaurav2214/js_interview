@@ -1,5 +1,5 @@
 function findMissingNumber(nums) {
-    const numArr = nums.sort();
+    const numArr = nums.sort((a, b) => a - b);
     for (let i = 0; i <= numArr.length; i++) {
         if (numArr[i] !== i) {
             return i;
