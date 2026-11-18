@@ -1,6 +1,9 @@
 var arr = [2,4,5,6,9,1,3,7,10,6,3];
 
 const largestSecond = (arr) => {
+    // const sortArr = arr.sort((a, b) => a - b);
+    // return sortArr[sortArr.length - 2];
+
     let largest = arr[0];
     let result = null;
     for(let i=0;i<arr.length;i++){
